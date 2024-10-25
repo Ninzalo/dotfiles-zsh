@@ -11,7 +11,6 @@ alias cls='clear'
 alias ll='ls -al'
 alias act='source ./venv/bin/activate'
 alias dea='deactivate'
-alias nvimconf='nvim ~/.config/nvim'
 
 export HOMEBREW_NO_ENV_HINTS=TRUE
 export PATH="$HOME/.local/bin:/opt/homebrew/bin:$PATH"
