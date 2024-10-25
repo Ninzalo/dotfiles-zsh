@@ -43,23 +43,6 @@ alias cd="z"
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 
-
-# Check if tmux is installed
-if command -v tmux > /dev/null 2>&1; then
-    # Only proceed if not already inside a tmux session
-    if [ -z "$TMUX" ]; then
-        # Check if a tmux server is running
-        if ! tmux ls > /dev/null 2>&1; then
-            # No server running, start tmux
-            tmux
-        else
-            # Server is running, attach to the first session
-            first_session=$(tmux ls | head -n 1 | cut -d: -f1)
-            tmux attach-session -t "$first_session"
-        fi
-    fi
-fi
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -78,3 +61,20 @@ bindkey '^[[B' history-search-forward
 
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Tmux auto start
+# Check if tmux is installed
+if command -v tmux > /dev/null 2>&1; then
+    # Only proceed if not already inside a tmux session
+    if [ -z "$TMUX" ]; then
+        # Check if a tmux server is running
+        if ! tmux ls > /dev/null 2>&1; then
+            # No server running, start tmux
+            tmux
+        else
+            # Server is running, attach to the first session
+            first_session=$(tmux ls | head -n 1 | cut -d: -f1)
+            tmux attach-session -t "$first_session"
+        fi
+    fi
+fi
