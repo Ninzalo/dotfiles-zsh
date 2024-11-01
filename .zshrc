@@ -8,7 +8,6 @@ fi
 ZSH_THEME="robbyrussell"
 
 alias cls='clear'
-alias ll='ls -al'
 alias act='source ./venv/bin/activate'
 alias dea='deactivate'
 
