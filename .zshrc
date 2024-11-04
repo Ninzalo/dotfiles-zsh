@@ -39,7 +39,7 @@ source <(zoxide init zsh)
 alias cd="z"
 
 # Eza (better ls)
-alias ll="eza -1lab --icons=always --group-directories-first --total-size --no-user --no-time --show-symlinks"
+alias ll="eza -1lab --icons=always --group-directories-first --no-user --no-time --show-symlinks"
 
 # Fzf
 # Set up fzf key bindings and fuzzy completion
