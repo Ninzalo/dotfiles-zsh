@@ -5,8 +5,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-ZSH_THEME="robbyrussell"
-
 alias cls='clear'
 alias act='source ./venv/bin/activate'
 alias dea='deactivate'
@@ -16,11 +14,6 @@ export PATH="$HOME/.local/bin:/opt/homebrew/bin:$PATH"
 
 function upd() {
   current_dir=$(pwd)
-  cd ~/dotfiles/nix-darwin/
-  echo "[INFO] Nix update started"
-  nix flake update
-  echo "[INFO] Nix rebuild started"
-  darwin-rebuild switch --flake .#mbp --impure
   echo "[INFO] Brew update started"
   brew update
   echo "[INFO] Brew upgrade started"
@@ -63,6 +56,7 @@ bindkey '^[[B' history-search-forward
 
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
 
 # Tmux auto start
 # Check if tmux is installed
