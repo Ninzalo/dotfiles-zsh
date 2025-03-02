@@ -7,6 +7,9 @@ export PATH="$HOME/.local/bin:/opt/homebrew/bin:$PATH"
 
 function upd() {
   current_dir=$(pwd)
+  echo "[INFO] Symlinks creation started"
+  cd ~/dotfiles/
+  sh ./apply_symlinks.sh
   echo "[INFO] Brew update started"
   brew update
   echo "[INFO] Brew upgrade started"
