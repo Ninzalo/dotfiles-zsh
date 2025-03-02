@@ -10,6 +10,9 @@ function upd() {
   echo "[INFO] Symlinks creation started"
   cd ~/dotfiles/
   sh ./apply_symlinks.sh
+  echo "[INFO] Brew packages installation started"
+  cd ~/dotfiles/
+  sh ./install_brew_packages.sh
   echo "[INFO] Brew update started"
   brew update
   echo "[INFO] Brew upgrade started"
