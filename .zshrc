@@ -3,6 +3,7 @@ alias act='source ./venv/bin/activate'
 alias dea='deactivate'
 
 export HOMEBREW_NO_ENV_HINTS=TRUE
+export HOMEBREW_REQUIRE_TAP_TRUST=0
 export PATH="$HOME/.local/bin:/opt/homebrew/bin:$PATH"
 
 function upd() {
