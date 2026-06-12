@@ -24,13 +24,13 @@ function upd() {
   brew upgrade
   echo "[INFO] Brew cleanup started"
   brew cleanup --prune=all
+  echo "[INFO] Update finished"
+  source ~/.zshrc
+  echo "[INFO] Shell reloaded"
   echo "[INFO] Mole optimization started"
   mole optimize
   echo "[INFO] Mole clean up started"
   mole clean
-  echo "[INFO] Update finished"
-  source ~/.zshrc
-  echo "[INFO] Shell reloaded"
   cd $current_dir
 }
 
