@@ -21,7 +21,7 @@ function upd() {
   echo "[INFO] Brew update started"
   brew update
   echo "[INFO] Brew upgrade started"
-  brew upgrade
+  brew upgrade -y
   echo "[INFO] Brew cleanup started"
   brew cleanup --prune=all
   echo "[INFO] Update finished"
