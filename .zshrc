@@ -66,6 +66,8 @@ source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
 
+[[ -f "$HOME/.zshrc.private" ]] && source "$HOME/.zshrc.private"
+
 # Tmux auto start
 # Check if tmux is installed
 if command -v tmux > /dev/null 2>&1; then
