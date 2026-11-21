@@ -3,8 +3,7 @@ alias act='source ./venv/bin/activate'
 alias dea='deactivate'
 
 export HOMEBREW_NO_ENV_HINTS=TRUE
-export HOMEBREW_REQUIRE_TAP_TRUST=0
-export HOMEBREW_NO_REQUIRE_TAP_TRUST=1
+unset HOMEBREW_NO_REQUIRE_TAP_TRUST
 
 export MOLE_ENABLE_DISK_VERIFY=1
 
